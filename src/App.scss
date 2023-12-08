@@ -1,0 +1,117 @@
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-color);
+}
+
+body {
+  background: var(--bg-color);
+  background: linear-gradient(
+    180deg,
+    var(--bg-color) 0%,
+    var(--muted-color) 100%
+  );
+}
+
+#root {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0 auto;
+
+  .left {
+    position: relative;
+
+    .content {
+      height: 100svh;
+      position: sticky;
+      top: 0;
+      right: 0;
+      padding: var(--main-content-padding);
+      display: -webkit-inline-box;
+      flex-direction: column;
+
+      p {
+        line-height: 1.5rem;
+        padding-right: 2rem;
+      }
+
+      span {
+        color: var(--a-color);
+      }
+
+      .navigation {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: var(--muted-color);
+          letter-spacing: 1px;
+          font-weight: 500;
+        }
+
+        a:hover,
+        a.active {
+          color: var(--a-color);
+        }
+
+        a::before {
+          content: "";
+          width: 30px;
+          height: 2px;
+          background-color: var(--muted-color);
+          display: inline-block;
+          transition: 0.3s ease;
+        }
+
+        a:hover::before,
+        a.active::before {
+          width: 70px;
+          background-color: var(--a-color);
+        }
+      }
+    }
+  }
+
+  .right {
+    .content {
+      padding: var(--main-content-padding);
+    }
+  }
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+
+  a {
+    border: none;
+    background: none;
+
+    i {
+      color: var(--muted-color);
+      transition: 0.2s ease;
+    }
+
+    i:hover {
+      color: var(--a-color);
+    }
+  }
+}

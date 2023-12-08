@@ -2,16 +2,32 @@ body,
 #root {
   width: 100%;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: var(--bg-color);
+}
+
+body {
+  background: var(--bg-color);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--bg-color)), to(var(--muted-color)));
+  background: linear-gradient(180deg, var(--bg-color) 0%, var(--muted-color) 100%);
+}
+
+#root {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .main {
   width: 100%;
   height: 100%;
   max-width: 1280px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 50% 50%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   margin: 0 auto;
 }
 
@@ -20,10 +36,17 @@ body,
 }
 
 .main .left .content {
+  height: 100svh;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   right: 0;
-  padding: 100px;
+  padding: var(--main-content-padding);
+  display: -webkit-inline-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .main .left .content p {
@@ -36,14 +59,23 @@ body,
 }
 
 .main .left .content .navigation {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1.5rem;
 }
 
 .main .left .content .navigation a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
   text-decoration: none;
   text-transform: uppercase;
@@ -52,11 +84,9 @@ body,
   font-weight: 500;
 }
 
-.main .left .content .navigation a:hover {
+.main .left .content .navigation a:hover,
+.main .left .content .navigation a.active {
   color: var(--a-color);
-}
-
-.main .left .content .navigation > a.active {
 }
 
 .main .left .content .navigation a::before {
@@ -65,10 +95,40 @@ body,
   height: 2px;
   background-color: var(--muted-color);
   display: inline-block;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
 
-.main .left .content .navigation a:hover::before {
+.main .left .content .navigation a:hover::before,
+.main .left .content .navigation a.active::before {
   width: 70px;
   background-color: var(--a-color);
 }
+
+.main .right .content {
+  padding: var(--main-content-padding);
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+}
+
+.links a {
+  border: none;
+  background: none;
+}
+
+.links a i {
+  color: var(--muted-color);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.links a i:hover {
+  color: var(--a-color);
+}
+/*# sourceMappingURL=App.css.map */

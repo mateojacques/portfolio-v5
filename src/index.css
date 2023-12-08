@@ -5,11 +5,21 @@
 }
 
 :root {
-  --bg-color: #462521;
-  --p-color: #8a6552;
-  --h-color: #ffe0b5;
-  --a-color: #ca2e55;
-  --muted-color: #7D413B;
+  /* DUNK */
+  --bg-color: #9A3B3B;
+  --p-color: #C08261;
+  --h-color: #E2C799;
+  --a-color: #F2ECBE;
+  --muted-color: #8e4e4e;
+
+  /* SUNSET */
+  /* --bg-color: #711DB0;
+  --p-color: #EF4040;
+  --h-color: #FFA732;
+  --a-color: #C21292;
+  --muted-color: #503564; */
+
+  --main-content-padding: 100px;
 
   font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -46,6 +56,14 @@ a {
 
 .f-s-24 {
   font-size: 1.5rem;
+}
+
+.f-s-30 {
+  font-size: 1.875rem;
+}
+
+.f-w-400 {
+  font-weight: 400;
 }
 
 .m-b-10 {
