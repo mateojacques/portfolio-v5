@@ -1,0 +1,74 @@
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-color);
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0 auto;
+}
+
+.main .left {
+  position: relative;
+}
+
+.main .left .content {
+  position: sticky;
+  top: 0;
+  right: 0;
+  padding: 100px;
+}
+
+.main .left .content p {
+  line-height: 1.5rem;
+  padding-right: 2rem;
+}
+
+.main .left .content span {
+  color: var(--a-color);
+}
+
+.main .left .content .navigation {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main .left .content .navigation a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--muted-color);
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.main .left .content .navigation a:hover {
+  color: var(--a-color);
+}
+
+.main .left .content .navigation > a.active {
+}
+
+.main .left .content .navigation a::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: var(--muted-color);
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.main .left .content .navigation a:hover::before {
+  width: 70px;
+  background-color: var(--a-color);
+}
