@@ -2,8 +2,7 @@ const About = () => {
   return (
     <div id="about">
       <p>
-        Creative developer eager to learn. Comfortable working in a
-        team environment.
+        Creative developer eager to learn.
       </p>
       <br />
       <p>

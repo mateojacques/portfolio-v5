@@ -5,7 +5,7 @@ const Header = () => {
         <h1 className="f-s-48 m-b-10">Mateo Jacques</h1>
         <h2 className="f-s-24 m-b-20 f-w-400">Fullstack Developer</h2>
         <p className="f-s-16 m-b-60">
-          Dreaming experiences and then building them.
+          Dreaming experiences then building them.
         </p>
         <nav className="navigation">
           <a href="#about" className="active">
