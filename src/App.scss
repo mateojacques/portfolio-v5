@@ -121,3 +121,21 @@ body {
     }
   }
 }
+
+@media screen and (max-width: 950px) {
+  .app {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    grid-template-columns: 100%;
+
+    .header {
+      .content {
+        height: auto;
+      }
+    }
+  }
+}

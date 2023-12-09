@@ -7,7 +7,7 @@ const Header = () => {
         <p className="f-s-16 m-b-60">
           Dreaming experiences then building them.
         </p>
-        <nav className="navigation">
+        <nav className="navigation m-b-60">
           <a href="#about" className="active">
             About
           </a>

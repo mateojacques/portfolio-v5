@@ -135,4 +135,21 @@ body {
 .links a i:hover {
   color: var(--accent-color);
 }
+
+@media screen and (max-width: 950px) {
+  .app {
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .app .header .content {
+    height: auto;
+  }
+}
 /*# sourceMappingURL=App.css.map */
