@@ -20,7 +20,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
 }
 
-.main {
+.app {
   width: 100%;
   height: 100%;
   max-width: 1280px;
@@ -31,11 +31,11 @@ body {
   margin: 0 auto;
 }
 
-.main .left {
+.app .header {
   position: relative;
 }
 
-.main .left .content {
+.app .header .content {
   height: 100svh;
   position: -webkit-sticky;
   position: sticky;
@@ -49,16 +49,16 @@ body {
           flex-direction: column;
 }
 
-.main .left .content p {
+.app .header .content p {
   line-height: 1.5rem;
   padding-right: 2rem;
 }
 
-.main .left .content span {
-  color: var(--a-color);
+.app .header .content span {
+  color: var(--accent-color);
 }
 
-.main .left .content .navigation {
+.app .header .content .navigation {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -69,7 +69,7 @@ body {
   gap: 1.5rem;
 }
 
-.main .left .content .navigation a {
+.app .header .content .navigation a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,12 +84,12 @@ body {
   font-weight: 500;
 }
 
-.main .left .content .navigation a:hover,
-.main .left .content .navigation a.active {
-  color: var(--a-color);
+.app .header .content .navigation a:hover,
+.app .header .content .navigation a.active {
+  color: var(--accent-color);
 }
 
-.main .left .content .navigation a::before {
+.app .header .content .navigation a::before {
   content: "";
   width: 30px;
   height: 2px;
@@ -99,14 +99,18 @@ body {
   transition: 0.3s ease;
 }
 
-.main .left .content .navigation a:hover::before,
-.main .left .content .navigation a.active::before {
+.app .header .content .navigation a:hover::before,
+.app .header .content .navigation a.active::before {
   width: 70px;
-  background-color: var(--a-color);
+  background-color: var(--accent-color);
 }
 
-.main .right .content {
+.app .main .content {
   padding: var(--main-content-padding);
+}
+
+.app .main .content #about p {
+  line-height: 1.5rem;
 }
 
 .links {
@@ -129,6 +133,6 @@ body {
 }
 
 .links a i:hover {
-  color: var(--a-color);
+  color: var(--accent-color);
 }
 /*# sourceMappingURL=App.css.map */

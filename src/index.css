@@ -5,19 +5,17 @@
 }
 
 :root {
-  /* DUNK */
-  --bg-color: #9A3B3B;
-  --p-color: #C08261;
-  --h-color: #E2C799;
-  --a-color: #F2ECBE;
-  --muted-color: #8e4e4e;
-
   /* SUNSET */
-  /* --bg-color: #711DB0;
-  --p-color: #EF4040;
-  --h-color: #FFA732;
-  --a-color: #C21292;
-  --muted-color: #503564; */
+  --bg-color: #711db0;
+  --accent-color: #c21292;
+  --h-color: #ffa732;
+  --muted-color: #633387;
+
+  /* DUNK */
+  /*   --bg-color: #9a3b3b;
+  --accent-color: #f2ecbe;
+  --h-color: #e2c799;
+  --muted-color: #8e4e4e; */
 
   --main-content-padding: 100px;
 
@@ -43,11 +41,12 @@ h6 {
 }
 
 p {
-  color: var(--p-color);
+  color: var(--muted-color);
 }
 
 a {
-  color: var(--a-color);
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 .f-s-48 {
@@ -76,4 +75,8 @@ a {
 
 .m-b-60 {
   margin-bottom: 60px;
+}
+
+.text-accent {
+  color: var(--accent-color);
 }

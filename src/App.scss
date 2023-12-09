@@ -21,7 +21,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
 }
 
-.main {
+.app {
   width: 100%;
   height: 100%;
   max-width: 1280px;
@@ -29,7 +29,7 @@ body {
   grid-template-columns: 50% 50%;
   margin: 0 auto;
 
-  .left {
+  .header {
     position: relative;
 
     .content {
@@ -47,7 +47,7 @@ body {
       }
 
       span {
-        color: var(--a-color);
+        color: var(--accent-color);
       }
 
       .navigation {
@@ -68,7 +68,7 @@ body {
 
         a:hover,
         a.active {
-          color: var(--a-color);
+          color: var(--accent-color);
         }
 
         a::before {
@@ -83,15 +83,21 @@ body {
         a:hover::before,
         a.active::before {
           width: 70px;
-          background-color: var(--a-color);
+          background-color: var(--accent-color);
         }
       }
     }
   }
 
-  .right {
+  .main {
     .content {
       padding: var(--main-content-padding);
+
+      #about {
+        p {
+          line-height: 1.5rem;
+        }
+      }
     }
   }
 }
@@ -111,7 +117,7 @@ body {
     }
 
     i:hover {
-      color: var(--a-color);
+      color: var(--accent-color);
     }
   }
 }
