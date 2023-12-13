@@ -2,12 +2,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="content">
-        <h1 className="f-s-48 m-b-10">Mateo Jacques</h1>
+        <h1 className="f-s-44 m-b-10">Mateo Jacques</h1>
         <h2 className="f-s-24 m-b-20 f-w-400">Fullstack Developer</h2>
         <p className="f-s-16 m-b-60">
           Dreaming experiences then building them.
         </p>
-        <nav className="navigation m-b-60">
+        <nav className="navigation">
           <a href="#about" className="active">
             About
           </a>
