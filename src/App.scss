@@ -47,7 +47,7 @@ body::before {
   height: 100%;
   max-width: 1280px;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
   margin: 0 auto;
 
   .header {
@@ -75,6 +75,7 @@ body::before {
         display: inline-flex;
         flex-direction: column;
         gap: 1.5rem;
+        margin-bottom: 60px;
 
         a {
           display: flex;
@@ -111,12 +112,63 @@ body::before {
   }
 
   .main {
-    .content {
+    > .content {
       padding: var(--main-content-padding);
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
 
       #about {
+        padding: 20px;
         p {
           line-height: 1.5rem;
+        }
+      }
+
+      #experience {
+        &:hover .experience-card:not(:hover){
+          opacity: 0.3;
+        }
+
+        .experience-card {
+          width: 100%;
+          display: flex;
+          gap: 1rem;
+          transition: 0.3s ease;
+          padding: 1rem;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-bottom: 1rem;
+          outline: 1px solid transparent;
+
+          &:hover {
+            background-color: var(--muted-color-10);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px var(--accent-color-20);
+            outline: 1px solid var(--muted-color-50);
+          }
+
+          .date {
+            width: 25%;
+            p {
+              padding-top: 3px;
+            }
+          }
+
+          .content {
+            width: 75%;
+            h3 {
+              transition: 0.3s ease;
+            }
+
+            p {
+              line-height: 1.5rem;
+            }
+
+            ul {
+              list-style: none;
+            }
+          }
         }
       }
     }
@@ -194,6 +246,38 @@ body::before {
     .header {
       .content {
         height: auto;
+
+        .navigation {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          background-color: var(--bg-color);
+          margin-bottom: 0px;
+          padding: 2rem;
+
+
+          a {
+            display: inline;
+            text-align: center;
+          }
+
+          a::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .main {
+      .content {
+        padding: 10px;
+
+        #experience {
+          padding: 10px;
+        }
       }
     }
   }

@@ -9,12 +9,16 @@
   --gradient-color: #63149f;
   --accent-color: #c21292;
   --accent-color-10: #c2129210;
+  --accent-color-20: #c2129220;
   --accent-color-50: #c2129250;
   --h-color: #ffa732;
   --muted-color: #633387;
+  --muted-color-10: #69289a10;
+  --muted-color-50: #69289a50;
+  --p-color: #b36fe7;
   --overlay-opacity: 0.8;
 
-  --main-content-padding: 100px;
+  --main-content-padding: 80px;
 
   font-family: "Rubik", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -38,7 +42,7 @@ h6 {
 }
 
 p {
-  color: var(--muted-color);
+  color: var(--p-color);
 }
 
 a {
@@ -46,8 +50,16 @@ a {
   text-decoration: none;
 }
 
-.f-s-48 {
-  font-size: 3rem;
+.f-s-12 {
+  font-size: 0.75rem;
+}
+
+.f-s-14 {
+  font-size: 0.875rem;
+}
+
+.f-s-16 {
+  font-size: 1rem;
 }
 
 .f-s-24 {
@@ -58,8 +70,24 @@ a {
   font-size: 1.875rem;
 }
 
+.f-s-44 {
+  font-size: 2.75rem;
+}
+
+.f-s-48 {
+  font-size: 3rem;
+}
+
 .f-w-400 {
   font-weight: 400;
+}
+
+.f-w-500 {
+  font-weight: 500;
+}
+
+.m-b-5 {
+  margin-bottom: 5px;
 }
 
 .m-b-10 {
