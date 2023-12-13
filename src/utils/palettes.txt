@@ -1,0 +1,39 @@
+  SUNSET
+  --bg-color: #711db0;
+  --gradient-color: #63149f;
+  --accent-color: #c21292;
+  --accent-color-10: #c2129210;
+  --accent-color-50: #c2129250;
+  --h-color: #ffa732;
+  --muted-color: #633387;
+  --overlay-opacity: 0.8;
+
+   SUNSET 4
+   --bg-color: #3a1143;
+  --gradient-color: #4C1A57;
+  --accent-color: #FF3CC7;
+  --accent-color-10: #FF3CC710;
+  --accent-color-50: #FF3CC750;
+  --h-color: #F0F600;
+  --muted-color: #9e5bad; 
+  --overlay-opacity: 0.8;
+
+   BC4 
+   --bg-color: #261f0f;
+  --gradient-color: rgb(87, 73, 38);
+  --accent-color: #d95971;
+  --accent-color-10: #d9597110;
+  --accent-color-50: #d9597150;
+  --h-color: #eee8e0;
+  --muted-color: #a69885;
+  --overlay-opacity: 0.8;
+
+  BAP
+  --bg-color: #000000;
+  --gradient-color: #3a3a3a;
+  --accent-color: #9031C4;
+  --accent-color-10: #9031C410;
+  --accent-color-50: #9031C450;
+  --h-color: #FFFFFF;
+  --muted-color: #ccccccb5;
+  --overlay-opacity: 0.8;
