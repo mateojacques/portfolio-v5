@@ -1,3 +1,5 @@
+import { GITHUB_URL } from "../utils/constants";
+
 const About = () => {
   return (
     <div id="about">
@@ -11,7 +13,7 @@ const About = () => {
       <br />
       <p>
         Currently working as a{" "}
-        <a href="https://www.github.com/mateojacques" target="_blank">
+        <a href={GITHUB_URL} target="_blank">
           Fullstack Developer
         </a>{" "}
         in{" "}
@@ -19,7 +21,7 @@ const About = () => {
           avenida+
         </a>
         . Contributing to{" "}
-        <a href="#" target="_blank">
+        <a href={GITHUB_URL} target="_blank">
           open source projects
         </a>
         . Developing <a href="#projects">cool projects</a> myself.
