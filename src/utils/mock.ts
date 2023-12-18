@@ -1,4 +1,8 @@
 import { IProject } from "../interfaces/project";
+import plazemLogo from "../assets/plazem_logo.png";
+import doratvLogo from "../assets/doratv_logo.png";
+import gamefortLogo from "../assets/gamefort_logo.png";
+import altarLogo from "../assets/altar_logo.png";
 
 export const PROJECTS: IProject[] = [
   {
@@ -11,6 +15,7 @@ export const PROJECTS: IProject[] = [
     learned:
       "To build an interactive game using almost only the functionality that React provides out of the box.\nWhat limitations React has when developing web applications that require accurate and fast events related to user input.",
     images: [
+      plazemLogo,
       "https://images.ctfassets.net/e8ev9fexmmov/4QN88dsOs3LSTBZAMBxJMo/2cc3263ebdf3c6851a2fe8bc28506f9a/Frame_2__1_.png",
       "https://images.ctfassets.net/e8ev9fexmmov/6Vkwye0CBOfoIQLx6rLSsh/8c8b5e379b0f4c80f2789635c080ba3f/image.png",
       "https://images.ctfassets.net/e8ev9fexmmov/3dJmMvS2NMifaKYHBJsBLY/8d0cbdca7b31d0c99a44f33abdd1a9c0/image.png",
@@ -29,6 +34,7 @@ export const PROJECTS: IProject[] = [
     learned:
       "To utilize Twitch's API to create a custom user interface for watching streams.",
     images: [
+      doratvLogo,
       "https://images.ctfassets.net/e8ev9fexmmov/3Zpj0PM6HV2Fy5rh5tA4rM/b3d5f178a2d30bd4303df27a40a97fee/doratv_1.png",
       "https://images.ctfassets.net/e8ev9fexmmov/3MYcIEVE2H1wG7wwUsDct9/70c4a877ea5bd8f883b31cfe69db5ad1/doratv_2.png",
       "https://images.ctfassets.net/e8ev9fexmmov/2nhh30znm8Aia6LfJ1hlCx/5dfce4d50ad1f2115f898384a0176a7b/doratv_3.png",
@@ -46,6 +52,7 @@ export const PROJECTS: IProject[] = [
     learned:
       "To consume an API to create an updated library of free games.\nTo design and develop a Netflix-like UI.",
     images: [
+      gamefortLogo,
       "https://images.ctfassets.net/e8ev9fexmmov/4L9YtA2jeowKp4VoupP0Bc/c07d22e5e63dbaa0e87a0e1c5b96af01/Frame_1.png",
       "https://images.ctfassets.net/e8ev9fexmmov/5QqmSj2OQU7WUdkDcBeJ0I/367d3e5aba16759fce4406cee472612f/gamefort_2.png",
       "https://images.ctfassets.net/e8ev9fexmmov/3b1Xnps7afv3b0DD0TLwHJ/40c7b6a59254b2824dd796a1c4a8ee1b/gamefort_3.png",
@@ -63,6 +70,7 @@ export const PROJECTS: IProject[] = [
     learned:
       "To take my first steps with React.\nTo fetch data from an API using Axios.\nTo use Material UI to build aesthetically pleasing user interfaces in React.",
     images: [
+      altarLogo,
       "https://images.ctfassets.net/e8ev9fexmmov/4XoGUEmk42NDwNy6O7zVVi/a027b1155ad8244bedb306d19a736272/altar_1.png",
       "https://images.ctfassets.net/e8ev9fexmmov/DGO7DMhozacvW6XNKi10o/c9e1c5683d29cec41c26d38afb12da44/altar_2.png",
       "https://images.ctfassets.net/e8ev9fexmmov/4p7PVi6Lv9a3kYuapVxW9v/9d7bb25b50f4840b5bfe17068c4a961b/altar_3.png",

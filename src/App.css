@@ -1,3 +1,8 @@
+*,
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 #root {
   width: 100%;
@@ -119,7 +124,7 @@ body::before {
 }
 
 .app .header .content .navigation a:hover,
-.app .header .content .navigation a.active {
+.app .header .content .navigation a.active-scroll-spy {
   color: var(--accent-color);
 }
 
@@ -134,13 +139,16 @@ body::before {
 }
 
 .app .header .content .navigation a:hover::before,
-.app .header .content .navigation a.active::before {
+.app .header .content .navigation a.active-scroll-spy::before {
   width: 70px;
   background-color: var(--accent-color);
 }
 
 .app .main > .content {
   padding: var(--main-content-padding);
+}
+
+.app .main > .content > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,7 +181,6 @@ body::before {
   transition: 0.3s ease;
   padding: 1rem;
   border-radius: 5px;
-  cursor: pointer;
   margin-bottom: 1rem;
   outline: 1px solid transparent;
 }
@@ -211,6 +218,59 @@ body::before {
   list-style: none;
 }
 
+.app .main > .content #projects {
+  scroll-behavior: smooth;
+  margin-block: 2rem;
+}
+
+.app .main > .content #projects > p {
+  margin-bottom: 2rem;
+}
+
+.app .main > .content #projects .own-projects:hover .project:not(:hover) {
+  opacity: 0.3;
+}
+
+.app .main > .content #projects .own-projects .project {
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 0 4px 10px transparent;
+          box-shadow: 0 4px 10px transparent;
+  margin-bottom: 1rem;
+  outline: 1px solid transparent;
+}
+
+.app .main > .content #projects .own-projects .project:hover {
+  background-color: var(--muted-color-10);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 10px var(--accent-color-20);
+          box-shadow: 0 4px 10px var(--accent-color-20);
+  outline: 1px solid var(--muted-color-50);
+}
+
+.app .main > .content #projects .own-projects .project h3 {
+  margin-bottom: 10px;
+}
+
+.app .main > .content #projects .own-projects .project .description {
+  margin-bottom: 20px;
+}
+
+.app .main > .content #projects .own-projects .project .stack {
+  gap: 10px;
+}
+
+.app .main > .content #projects .own-projects .project .stack .stack-chip {
+  font-size: 12px;
+  padding: 0.3rem 0.75rem;
+  background-color: var(--accent-color-50);
+  color: var(--accent-color);
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
 .links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -232,47 +292,6 @@ body::before {
 
 .links a i:hover {
   color: var(--accent-color);
-}
-
-#projects {
-  margin-block: 2rem;
-}
-
-#projects .project {
-  padding: 1rem;
-  border-radius: 5px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  -webkit-box-shadow: 0 4px 10px transparent;
-          box-shadow: 0 4px 10px transparent;
-  margin-bottom: 1rem;
-}
-
-#projects .project:hover {
-  -webkit-box-shadow: 0 1px 10px var(--accent-color-10);
-          box-shadow: 0 1px 10px var(--accent-color-10);
-  background-color: var(--accent-color-10);
-}
-
-#projects .project h3 {
-  margin-bottom: 10px;
-}
-
-#projects .project .description {
-  margin-bottom: 20px;
-}
-
-#projects .project .stack {
-  gap: 10px;
-}
-
-#projects .project .stack .stack-chip {
-  font-size: 12px;
-  padding: 0.3rem 0.75rem;
-  background-color: var(--accent-color-50);
-  color: var(--accent-color);
-  margin-right: 10px;
-  border-radius: 15px;
 }
 
 @media screen and (max-width: 950px) {

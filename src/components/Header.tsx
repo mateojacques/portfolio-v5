@@ -1,3 +1,10 @@
+import {
+  GITHUB_URL,
+  GITLAB_URL,
+  LINKEDIN_URL,
+  MAIL_URL,
+} from "../utils/constants";
+
 const Header = () => {
   return (
     <header className="header">
@@ -7,24 +14,60 @@ const Header = () => {
         <p className="f-s-16 m-b-60">
           Dreaming experiences then building them.
         </p>
-        <nav className="navigation">
-          <a href="#about" className="active">
+        <nav id="navigation" className="navigation">
+          <a
+            href="#about"
+            className="section-link"
+            data-to-scrollspy-id="about"
+          >
             About
           </a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
+          <a
+            href="#experience"
+            className="section-link"
+            data-to-scrollspy-id="experience"
+          >
+            Experience
+          </a>
+          <a
+            href="#projects"
+            className="section-link"
+            data-to-scrollspy-id="projects"
+          >
+            Projects
+          </a>
         </nav>
         <div className="links">
-          <a href="#" className="f-s-30">
+          <a
+            href={LINKEDIN_URL}
+            className="f-s-30"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="#" className="f-s-30">
+          <a
+            href={GITHUB_URL}
+            className="f-s-30"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-github"></i>
           </a>
-          <a href="#" className="f-s-30">
+          <a
+            href={GITLAB_URL}
+            className="f-s-30"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-gitlab"></i>
           </a>
-          <a href="#" className="f-s-30">
+          <a
+            href={MAIL_URL}
+            className="f-s-30"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fas fa-at"></i>
           </a>
         </div>

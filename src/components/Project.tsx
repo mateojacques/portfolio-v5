@@ -13,8 +13,8 @@ const Project = ({
         <div className="d-flex">
           <img
             src={images[0]}
-            width={64}
-            height={64}
+            width={32}
+            height={32}
             alt={name}
             style={{ marginRight: 15 }}
           />
