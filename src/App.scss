@@ -1,3 +1,8 @@
+*,
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 #root {
   width: 100%;
@@ -8,17 +13,38 @@ body,
 
 body {
   background: var(--bg-color);
-  background: linear-gradient(
-    180deg,
-    var(--bg-color) 0%,
-    var(--muted-color) 100%
-  );
+}
+
+@keyframes bounce {
+  from {
+    transform: scale(3);
+  }
+
+  to {
+    transform: scale(10);
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100svw;
+  height: 100svh;
+  background-image: repeating-radial-gradient(
+      circle at center center,
+      transparent 0,
+      var(--bg-color) 10px
+    ),
+    repeating-linear-gradient(var(--gradient-color), var(--gradient-color));
+  z-index: -1;
+  filter: blur(3px);
+  animation: bounce 10s infinite alternate ease-in-out;
 }
 
 #root {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, var(--overlay-opacity));
 }
 
 .app {
@@ -68,7 +94,7 @@ body {
         }
 
         a:hover,
-        a.active {
+        a.active-scroll-spy {
           color: var(--accent-color);
         }
 
@@ -82,7 +108,7 @@ body {
         }
 
         a:hover::before,
-        a.active::before {
+        a.active-scroll-spy::before {
           width: 70px;
           background-color: var(--accent-color);
         }
@@ -93,9 +119,12 @@ body {
   .main {
     > .content {
       padding: var(--main-content-padding);
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
 
       #about {
         padding: 20px;
@@ -105,7 +134,7 @@ body {
       }
 
       #experience {
-        &:hover .experience-card:not(:hover){
+        &:hover .experience-card:not(:hover) {
           opacity: 0.3;
         }
 
@@ -116,7 +145,6 @@ body {
           transition: 0.3s ease;
           padding: 1rem;
           border-radius: 5px;
-          cursor: pointer;
           margin-bottom: 1rem;
           outline: 1px solid transparent;
 
@@ -150,6 +178,58 @@ body {
           }
         }
       }
+
+      #projects {
+        scroll-behavior: smooth;
+        margin-block: 2rem;
+
+        > p {
+          margin-bottom: 2rem;
+        }
+
+        .own-projects {
+          &:hover .project:not(:hover) {
+            opacity: 0.3;
+          }
+
+          .project {
+            padding: 1.5rem 1rem;
+            border-radius: 5px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 10px transparent;
+            margin-bottom: 1rem;
+            outline: 1px solid transparent;
+
+            &:hover {
+              background-color: var(--muted-color-10);
+              border-radius: 10px;
+              box-shadow: 0 4px 10px var(--accent-color-20);
+              outline: 1px solid var(--muted-color-50);
+            }
+
+            h3 {
+              margin-bottom: 10px;
+            }
+
+            .description {
+              margin-bottom: 20px;
+            }
+
+            .stack {
+              gap: 10px;
+
+              .stack-chip {
+                font-size: 12px;
+                padding: 0.3rem 0.75rem;
+                background-color: var(--accent-color-50);
+                color: var(--accent-color);
+                margin-right: 10px;
+                border-radius: 15px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -174,7 +254,13 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 950px) {
+  .app {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .app {
     grid-template-columns: 100%;
 
@@ -192,7 +278,6 @@ body {
           background-color: var(--bg-color);
           margin-bottom: 0px;
           padding: 2rem;
-
 
           a {
             display: inline;

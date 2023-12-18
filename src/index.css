@@ -5,34 +5,18 @@
 }
 
 :root {
-  /* BLUE */
- /*    --bg-color: #040425;
-  --accent-color: #EEEEEE;
-  --h-color: #b8dfff;
-  --muted-color: #2e2e80;
-  --p-color: #919191; */
-
-  /* GREEN */
-  /* --bg-color: #092635;
-  --accent-color: #9EC8B9;
-  --h-color: #95c3b1;
-  --muted-color: #5C8374; */
-
-  /* SUNSET */
-    --bg-color: #220931;
+  --bg-color: #711db0;
+  --gradient-color: #38035f;
   --accent-color: #c21292;
+  --accent-color-10: #c2129210;
   --accent-color-20: #c2129220;
+  --accent-color-50: #c2129250;
   --h-color: #ffa732;
-  --muted-color: #69289a;
-  --muted-color-50: #69289a50;
+  --muted-color: #633387;
   --muted-color-10: #69289a10;
+  --muted-color-50: #69289a50;
   --p-color: #b36fe7;
-
-  /* DUNK */
-  /* --bg-color: #9a3b3b;
-  --accent-color: #f2ecbe;
-  --h-color: #e2c799;
-  --muted-color: #8e4e4e; */
+  --overlay-opacity: 0.8;
 
   --main-content-padding: 80px;
 
@@ -126,11 +110,27 @@ a {
   color: var(--muted-color);
 }
 
-.text-uppercase {
-  text-transform: uppercase;
+.d-flex {
+  display: flex;
 }
 
-@media screen and (max-width: 800px) {
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
   :root {
     --main-content-padding: 30px;
   }
