@@ -13,6 +13,7 @@ const Projects = () => {
         </a>
         .
       </p>
+      <p>Here are some cool projects I've built on my spare time.</p>
       <div className="own-projects">
         {PROJECTS.map((project) => (
           <Project key={project.id} {...project} />

@@ -17,21 +17,21 @@ const Header = () => {
         <nav id="navigation" className="navigation">
           <a
             href="#about"
-            className="section-link"
+            className="section-link f-s-14"
             data-to-scrollspy-id="about"
           >
             About
           </a>
           <a
             href="#experience"
-            className="section-link"
+            className="section-link f-s-14"
             data-to-scrollspy-id="experience"
           >
             Experience
           </a>
           <a
             href="#projects"
-            className="section-link"
+            className="section-link f-s-14"
             data-to-scrollspy-id="projects"
           >
             Projects
@@ -44,7 +44,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin" />
           </a>
           <a
             href={GITHUB_URL}
@@ -52,7 +52,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fab fa-github"></i>
+            <i className="fab fa-github" />
           </a>
           <a
             href={GITLAB_URL}
@@ -60,7 +60,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fab fa-gitlab"></i>
+            <i className="fab fa-gitlab" />
           </a>
           <a
             href={MAIL_URL}
@@ -68,7 +68,7 @@ const Header = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i className="fas fa-at"></i>
+            <i className="fas fa-at" />
           </a>
         </div>
       </div>
