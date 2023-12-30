@@ -2,16 +2,13 @@
 
 :root {
   --main-content-padding: 80px;
-
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+  --font: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  font-family: var(--font);
 }
 
-$color-list: #984f9a, #9a4f53, #4f9a95, #4f839a;
-$key: random(length($color-list));
-$random-color: nth($color-list, $key);
-
-$color: $random-color;
+$color: #984f9a;
 $bg-color: color.scale($color, $lightness: -80%);
 $h-color: color.scale($color, $lightness: 60%);
 $p-color: color.scale($color, $lightness: 80%);
@@ -218,6 +215,55 @@ body,
           background-color: $p-color;
         }
       }
+
+      a.btn.download-cv-btn {
+        margin-top: auto;
+        border: none;
+        border-radius: 5px;
+        background: none;
+        padding: 0.5rem 0.75rem;
+        align-self: flex-start;
+        font-family: var(--font);
+        text-align: start;
+        cursor: pointer;
+        background-color: $shadow-color;
+        transition: 0.2s ease;
+        border: 1px solid $shadow-outline-color;
+
+        &:hover {
+          background-color: $shadow-outline-color;
+        }
+
+        p {
+          padding: 0px !important;
+          color: $p-color;
+          letter-spacing: 0.5px;
+
+          i {
+            margin-left: 3px;
+          }
+        }
+      }
+
+      .links {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 30px;
+
+        a {
+          border: none;
+          background: none;
+
+          i {
+            color: $muted-color;
+            transition: 0.2s ease;
+          }
+
+          i:hover {
+            color: $accent-color;
+          }
+        }
+      }
     }
   }
 
@@ -340,26 +386,6 @@ body,
   }
 }
 
-.links {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: auto;
-
-  a {
-    border: none;
-    background: none;
-
-    i {
-      color: $muted-color;
-      transition: 0.2s ease;
-    }
-
-    i:hover {
-      color: $accent-color;
-    }
-  }
-}
-
 @media screen and (pointer: fine) {
   .app {
     .circle {
@@ -388,6 +414,14 @@ body,
 @media screen and (max-width: 768px) {
   :root {
     --main-content-padding: 30px;
+  }
+
+  .m-b-60 {
+    margin-bottom: 30px;
+  }
+
+  .f-s-30 {
+    font-size: 1.5rem;
   }
 
   .app {

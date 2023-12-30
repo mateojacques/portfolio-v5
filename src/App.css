@@ -1,6 +1,8 @@
 :root {
   --main-content-padding: 80px;
-  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--font);
 }
 
 * {
@@ -192,6 +194,47 @@ body,
   width: 70px;
   background-color: #ecdaec;
 }
+.app .header .content a.btn.download-cv-btn {
+  margin-top: auto;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  padding: 0.5rem 0.75rem;
+  align-self: flex-start;
+  font-family: var(--font);
+  text-align: start;
+  cursor: pointer;
+  background-color: rgba(122, 63, 123, 0.1);
+  transition: 0.2s ease;
+  border: 1px solid rgba(207, 163, 208, 0.1);
+}
+.app .header .content a.btn.download-cv-btn:hover {
+  background-color: rgba(207, 163, 208, 0.1);
+}
+.app .header .content a.btn.download-cv-btn p {
+  padding: 0px !important;
+  color: #ecdaec;
+  letter-spacing: 0.5px;
+}
+.app .header .content a.btn.download-cv-btn p i {
+  margin-left: 3px;
+}
+.app .header .content .links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 30px;
+}
+.app .header .content .links a {
+  border: none;
+  background: none;
+}
+.app .header .content .links a i {
+  color: #723b74;
+  transition: 0.2s ease;
+}
+.app .header .content .links a i:hover {
+  color: #b26db4;
+}
 .app .main {
   z-index: 1000;
 }
@@ -288,23 +331,6 @@ body,
   border-radius: 15px;
 }
 
-.links {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: auto;
-}
-.links a {
-  border: none;
-  background: none;
-}
-.links a i {
-  color: #723b74;
-  transition: 0.2s ease;
-}
-.links a i:hover {
-  color: #b26db4;
-}
-
 @media screen and (pointer: fine) {
   .app .circle {
     display: block;
@@ -329,6 +355,12 @@ body,
 @media screen and (max-width: 768px) {
   :root {
     --main-content-padding: 30px;
+  }
+  .m-b-60 {
+    margin-bottom: 30px;
+  }
+  .f-s-30 {
+    font-size: 1.5rem;
   }
   .app {
     grid-template-columns: 100%;
