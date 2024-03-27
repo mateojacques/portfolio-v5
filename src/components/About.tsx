@@ -12,11 +12,7 @@ const About = () => {
       </p>
       <br />
       <p>
-        Currently working as a{" "}
-        <a href={GITHUB_URL} target="_blank">
-          Fullstack Developer
-        </a>{" "}
-        in{" "}
+        Currently working at{" "}
         <a href="https://www.avenidamas.com" target="_blank">
           avenida+
         </a>
@@ -24,7 +20,7 @@ const About = () => {
         <a href={GITHUB_URL} target="_blank">
           open source projects
         </a>
-        . Developing <a href="#projects">cool projects</a> myself.
+        .
       </p>
     </div>
   );

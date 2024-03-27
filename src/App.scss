@@ -9,14 +9,16 @@
 }
 
 $color: #984f9a;
-$bg-color: color.scale($color, $lightness: -80%);
-$h-color: color.scale($color, $lightness: 60%);
-$p-color: color.scale($color, $lightness: 80%);
+$bg-color: #161616;
+$bg-color-dark: color.scale($bg-color, $lightness: -30%);
+$bg-color-muted: color.scale($bg-color, $lightness: 30%);
+$h-color: color.scale($color, $lightness: 100%);
+$p-color: color.scale($color, $lightness: 100%, $alpha: -40%);
 $accent-color: color.scale($color, $lightness: 20%);
 $accent-color-50: color.scale($color, $lightness: 20%, $alpha: -50%);
-$muted-color: color.scale($color, $lightness: -25%);
-$shadow-color: color.scale($color, $lightness: -20%, $alpha: -90%);
-$shadow-outline-color: color.scale($color, $lightness: 50%, $alpha: -90%);
+$muted-color: color.scale($color, $lightness: 0%, $alpha: -70%);
+$shadow-color: color.scale($color, $lightness: -10%, $alpha: -90%);
+$shadow-outline-color: color.scale($color, $lightness: 30%, $alpha: -90%);
 $circle-color: color.scale($color, $lightness: -20%);
 
 * {
@@ -111,6 +113,10 @@ a {
   color: $muted-color;
 }
 
+.bg-muted {
+  color: $bg-color-muted;
+}
+
 .d-flex {
   display: flex;
 }
@@ -142,6 +148,7 @@ body,
   min-height: 100vh;
   display: flex;
   background-color: $bg-color;
+  background: linear-gradient(180deg, $bg-color 0%, $bg-color-dark 50%);
 }
 
 .app {
@@ -151,10 +158,6 @@ body,
   display: grid;
   grid-template-columns: 40% 60%;
   margin: 0 auto;
-
-  .circle {
-    display: none;
-  }
 
   .header {
     position: relative;
@@ -168,6 +171,10 @@ body,
       padding: var(--main-content-padding);
       display: flex;
       flex-direction: column;
+
+      > h2 {
+        opacity: 0.5;
+      }
 
       p {
         line-height: 1.5rem;
@@ -190,14 +197,16 @@ body,
           gap: 1rem;
           text-decoration: none;
           text-transform: uppercase;
-          color: $muted-color;
-          letter-spacing: 1px;
+          color: $p-color;
+          letter-spacing: 2px;
           font-weight: 500;
+          transition: letter-spacing 0.3s ease;
         }
 
         a:hover,
         a.active-scroll-spy {
-          color: $p-color;
+          color: $h-color;
+          letter-spacing: 3px;
         }
 
         a::before {
@@ -206,13 +215,13 @@ body,
           height: 2px;
           background-color: $muted-color;
           display: inline-block;
-          transition: 0.3s ease;
+          transition: width 0.3s ease;
         }
 
         a:hover::before,
         a.active-scroll-spy::before {
           width: 70px;
-          background-color: $p-color;
+          background-color: $accent-color;
         }
       }
 
@@ -236,7 +245,7 @@ body,
 
         p {
           padding: 0px !important;
-          color: $p-color;
+          color: $h-color;
           letter-spacing: 0.5px;
 
           i {
@@ -255,7 +264,7 @@ body,
           background: none;
 
           i {
-            color: $muted-color;
+            color: $bg-color-muted;
             transition: 0.2s ease;
           }
 
@@ -320,8 +329,9 @@ body,
               transition: 0.3s ease;
             }
 
-            p {
+            a {
               line-height: 1.5rem;
+              display: inline-block;
             }
 
             ul {
@@ -334,6 +344,7 @@ body,
       #projects {
         scroll-behavior: smooth;
         margin-block: 2rem;
+        padding: 1rem;
 
         > p {
           margin-bottom: 2rem;
@@ -373,8 +384,8 @@ body,
               .stack-chip {
                 font-size: 12px;
                 padding: 0.3rem 0.75rem;
-                background-color: $accent-color-50;
-                color: $accent-color;
+                border: 1px solid $shadow-outline-color;
+                color: $accent-color-50;
                 margin-right: 10px;
                 border-radius: 15px;
               }
@@ -382,25 +393,6 @@ body,
           }
         }
       }
-    }
-  }
-}
-
-@media screen and (pointer: fine) {
-  .app {
-    .circle {
-      display: block;
-      width: 500px;
-      height: 500px;
-      filter: blur(300px);
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      pointer-events: none;
-      z-index: 30;
-      background-color: $circle-color;
     }
   }
 }
@@ -469,6 +461,17 @@ body,
           padding: 10px;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1150px), screen and (max-width: 500px) {
+  .app .main > .content #experience .experience-card {
+    flex-wrap: wrap;
+
+    > .content,
+    > .date {
+      width: 100%;
     }
   }
 }

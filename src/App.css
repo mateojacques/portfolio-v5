@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #d8b6d9;
+  color: white;
 }
 
 h2,
@@ -29,7 +29,7 @@ h6 {
 }
 
 p {
-  color: #ecdaec;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 a {
@@ -94,7 +94,11 @@ a {
 }
 
 .text-muted {
-  color: #723b74;
+  color: rgba(152, 79, 154, 0.3);
+}
+
+.bg-muted {
+  color: #5c5c5c;
 }
 
 .d-flex {
@@ -127,7 +131,8 @@ body,
   width: 100%;
   min-height: 100vh;
   display: flex;
-  background-color: #1e101f;
+  background-color: #161616;
+  background: linear-gradient(180deg, #161616 0%, #0f0f0f 50%);
 }
 
 .app {
@@ -137,9 +142,6 @@ body,
   display: grid;
   grid-template-columns: 40% 60%;
   margin: 0 auto;
-}
-.app .circle {
-  display: none;
 }
 .app .header {
   position: relative;
@@ -153,6 +155,9 @@ body,
   padding: var(--main-content-padding);
   display: flex;
   flex-direction: column;
+}
+.app .header .content > h2 {
+  opacity: 0.5;
 }
 .app .header .content p {
   line-height: 1.5rem;
@@ -173,26 +178,28 @@ body,
   gap: 1rem;
   text-decoration: none;
   text-transform: uppercase;
-  color: #723b74;
-  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 2px;
   font-weight: 500;
+  transition: letter-spacing 0.3s ease;
 }
 .app .header .content .navigation a:hover,
 .app .header .content .navigation a.active-scroll-spy {
-  color: #ecdaec;
+  color: white;
+  letter-spacing: 3px;
 }
 .app .header .content .navigation a::before {
   content: "";
   width: 30px;
   height: 2px;
-  background-color: #723b74;
+  background-color: rgba(152, 79, 154, 0.3);
   display: inline-block;
-  transition: 0.3s ease;
+  transition: width 0.3s ease;
 }
 .app .header .content .navigation a:hover::before,
 .app .header .content .navigation a.active-scroll-spy::before {
   width: 70px;
-  background-color: #ecdaec;
+  background-color: #b26db4;
 }
 .app .header .content a.btn.download-cv-btn {
   margin-top: auto;
@@ -204,16 +211,16 @@ body,
   font-family: var(--font);
   text-align: start;
   cursor: pointer;
-  background-color: rgba(122, 63, 123, 0.1);
+  background-color: rgba(137, 71, 139, 0.1);
   transition: 0.2s ease;
-  border: 1px solid rgba(207, 163, 208, 0.1);
+  border: 1px solid rgba(188, 127, 189, 0.1);
 }
 .app .header .content a.btn.download-cv-btn:hover {
-  background-color: rgba(207, 163, 208, 0.1);
+  background-color: rgba(188, 127, 189, 0.1);
 }
 .app .header .content a.btn.download-cv-btn p {
   padding: 0px !important;
-  color: #ecdaec;
+  color: white;
   letter-spacing: 0.5px;
 }
 .app .header .content a.btn.download-cv-btn p i {
@@ -229,7 +236,7 @@ body,
   background: none;
 }
 .app .header .content .links a i {
-  color: #723b74;
+  color: #5c5c5c;
   transition: 0.2s ease;
 }
 .app .header .content .links a i:hover {
@@ -266,10 +273,10 @@ body,
   outline: 1px solid transparent;
 }
 .app .main > .content #experience .experience-card:hover {
-  background-color: rgba(122, 63, 123, 0.1);
+  background-color: rgba(137, 71, 139, 0.1);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(122, 63, 123, 0.1);
-  outline: 1px solid rgba(207, 163, 208, 0.1);
+  box-shadow: 0 4px 10px rgba(137, 71, 139, 0.1);
+  outline: 1px solid rgba(188, 127, 189, 0.1);
 }
 .app .main > .content #experience .experience-card .date {
   width: 25%;
@@ -283,8 +290,9 @@ body,
 .app .main > .content #experience .experience-card .content h3 {
   transition: 0.3s ease;
 }
-.app .main > .content #experience .experience-card .content p {
+.app .main > .content #experience .experience-card .content a {
   line-height: 1.5rem;
+  display: inline-block;
 }
 .app .main > .content #experience .experience-card .content ul {
   list-style: none;
@@ -292,6 +300,7 @@ body,
 .app .main > .content #projects {
   scroll-behavior: smooth;
   margin-block: 2rem;
+  padding: 1rem;
 }
 .app .main > .content #projects > p {
   margin-bottom: 2rem;
@@ -308,10 +317,10 @@ body,
   outline: 1px solid transparent;
 }
 .app .main > .content #projects .own-projects .project:hover {
-  background-color: rgba(122, 63, 123, 0.1);
+  background-color: rgba(137, 71, 139, 0.1);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(122, 63, 123, 0.1);
-  outline: 1px solid rgba(207, 163, 208, 0.1);
+  box-shadow: 0 4px 10px rgba(137, 71, 139, 0.1);
+  outline: 1px solid rgba(188, 127, 189, 0.1);
 }
 .app .main > .content #projects .own-projects .project h3 {
   margin-bottom: 10px;
@@ -325,28 +334,12 @@ body,
 .app .main > .content #projects .own-projects .project .stack .stack-chip {
   font-size: 12px;
   padding: 0.3rem 0.75rem;
-  background-color: rgba(178, 109, 180, 0.5);
-  color: #b26db4;
+  border: 1px solid rgba(188, 127, 189, 0.1);
+  color: rgba(178, 109, 180, 0.5);
   margin-right: 10px;
   border-radius: 15px;
 }
 
-@media screen and (pointer: fine) {
-  .app .circle {
-    display: block;
-    width: 500px;
-    height: 500px;
-    filter: blur(300px);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    pointer-events: none;
-    z-index: 30;
-    background-color: #7a3f7b;
-  }
-}
 @media screen and (max-width: 950px) {
   .app {
     grid-template-columns: 40% 60%;
@@ -375,10 +368,10 @@ body,
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #1e101f;
+    background-color: #161616;
     margin-bottom: 0px;
     padding: 2rem;
-    border-top: 1px solid #723b74;
+    border-top: 1px solid rgba(152, 79, 154, 0.3);
   }
   .app .header .content .navigation a {
     display: inline;
@@ -399,5 +392,14 @@ body,
   }
   .app .main > .content #experience {
     padding: 10px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1150px), screen and (max-width: 500px) {
+  .app .main > .content #experience .experience-card {
+    flex-wrap: wrap;
+  }
+  .app .main > .content #experience .experience-card > .content,
+  .app .main > .content #experience .experience-card > .date {
+    width: 100%;
   }
 }/*# sourceMappingURL=App.css.map */

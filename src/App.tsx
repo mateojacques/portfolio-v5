@@ -4,7 +4,6 @@ import Main from "./components/Main";
 function App() {
   return (
     <div className="app">
-      <div id="circle" className="circle"/>
       <Header />
       <Main />
     </div>
