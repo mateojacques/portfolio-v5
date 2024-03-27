@@ -4,6 +4,7 @@ import {
   LINKEDIN_URL,
   MAIL_URL,
 } from "../utils/constants";
+import curriculum from "../assets/cv_english.pdf";
 
 const Header = () => (
   <header className="header">
@@ -35,7 +36,7 @@ const Header = () => (
       </nav>
       <a
         className="btn download-cv-btn"
-        href="src/assets/cv_english.pdf"
+        href={curriculum}
         download="Mateo Jacques CV"
         target="_blank"
       >
