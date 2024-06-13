@@ -58,7 +58,7 @@ export const PROJECTS: IProject[] = [
       "https://images.ctfassets.net/e8ev9fexmmov/3b1Xnps7afv3b0DD0TLwHJ/40c7b6a59254b2824dd796a1c4a8ee1b/gamefort_3.png",
     ],
     repository_url: "https://github.com/mateojacques/gamefort",
-    deploy_url: "https://gamefort-f2p.mateojacques.com/",
+    deploy_url: "https://gamefort.mateojacques.com/",
   },
   {
     id: 4,
