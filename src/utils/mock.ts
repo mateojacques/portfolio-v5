@@ -22,7 +22,7 @@ export const PROJECTS: IProject[] = [
       "https://images.ctfassets.net/e8ev9fexmmov/6lhBAR4urOgFiiNt1IdWwf/d2662940c1d1d7b4e396b9ddd0d48ef7/image.png",
     ],
     repository_url: "https://github.com/mateojacques/plazem",
-    deploy_url: "https://plazem.mateojacquesweb.com/",
+    deploy_url: "https://plazem.mateojacques.com/",
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ export const PROJECTS: IProject[] = [
       "https://images.ctfassets.net/e8ev9fexmmov/2nhh30znm8Aia6LfJ1hlCx/5dfce4d50ad1f2115f898384a0176a7b/doratv_3.png",
     ],
     repository_url: "https://github.com/mateojacques/doratv",
-    deploy_url: "https://doratv.mateojacquesweb.com/",
+    deploy_url: "https://doratv.mateojacques.com/",
   },
   {
     id: 3,
@@ -58,7 +58,7 @@ export const PROJECTS: IProject[] = [
       "https://images.ctfassets.net/e8ev9fexmmov/3b1Xnps7afv3b0DD0TLwHJ/40c7b6a59254b2824dd796a1c4a8ee1b/gamefort_3.png",
     ],
     repository_url: "https://github.com/mateojacques/gamefort",
-    deploy_url: "https://gamefort-f2p.mateojacquesweb.com/",
+    deploy_url: "https://gamefort-f2p.mateojacques.com/",
   },
   {
     id: 4,
@@ -76,6 +76,6 @@ export const PROJECTS: IProject[] = [
       "https://images.ctfassets.net/e8ev9fexmmov/4p7PVi6Lv9a3kYuapVxW9v/9d7bb25b50f4840b5bfe17068c4a961b/altar_3.png",
     ],
     repository_url: "https://github.com/mateojacques/altar-app",
-    deploy_url: "https://altar.mateojacquesweb.com/",
+    deploy_url: "https://altar.mateojacques.com/",
   },
 ];
